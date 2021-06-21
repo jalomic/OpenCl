@@ -1,2 +1,44 @@
 # OpenCl
 OpenCl
+Common Extensions
+
+cl_khr_icd
+cl_khr_global_int32_base_atomics
+cl_khr_global_int32_extended_atomics
+cl_khr_local_int32_base_atomics
+cl_khr_local_int32_extended_atomics
+cl_khr_fp64
+cl_khr_3d_image_writes
+cl_khr_byte_addressable_store
+cl_khr_int64_base_atomics
+cl_khr_int64_extended_atomics
+
+CPU intel:
+
+cl_khr_depth_images
+cl_khr_il_program
+cl_intel_unified_shared_memory_preview
+cl_intel_subgroups
+cl_intel_subgroups_char
+cl_intel_subgroups_short
+cl_intel_subgroups_long
+cl_intel_spirv_subgroups
+cl_intel_required_subgroup_size
+cl_intel_exec_by_local_thread
+cl_intel_vec_len_hint
+cl_khr_spir
+cl_khr_image2d_from_buffer
+
+GPU Nvidia:
+
+cl_khr_gl_sharing
+
+cl_nv_compiler_options
+cl_nv_device_attribute_query
+cl_nv_pragma_unroll
+cl_nv_d3d10_sharing
+cl_khr_d3d10_sharing
+cl_nv_d3d11_sharing
+cl_nv_copy_opts
+cl_nv_create_buffer
+cl_khr_device_uuid
