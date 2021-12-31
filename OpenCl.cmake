@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.1)
 set(OPENCL_MIN_VERSION 120)
 
 set(OPENCL_ICD_LOADER_HEADERS_DIR
@@ -15,7 +15,11 @@ set_target_properties(OpenCL PROPERTIES LIBRARY_OUTPUT_DIRECTORY
     ${CMAKE_CURRENT_BINARY_DIR})
 
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${OPENCL_SDK_INCLUDE_DIRS})
-target_link_libraries(${CMAKE_PROJECT_NAME} OpenCL)
+if(APPLE)
+    target_link_libraries(${CMAKE_PROJECT_NAME} "-framework OpenCL")
+else()
+    target_link_libraries(${CMAKE_PROJECT_NAME} OpenCL)
+endif()
 
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE CL_HPP_ENABLE_EXCEPTIONS)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE CL_TARGET_OPENCL_VERSION=${OPENCL_MIN_VERSION})
